@@ -48,9 +48,40 @@ L’interface web permet de consulter :
 
 ## 📂 Structure du projet
 
+```bash
+EasyMonitor/
+├── collect/            # Scripts de collecte des données (Python & Bash)
+│   ├── sondes_cpu.sh / .py
+│   ├── sondes_ram.sh / .py
+│   └── ...
+│
+├── storage/            # Modules de stockage et d'archivage
+│   ├── gestion_sqlite.py
+│   ├── parseur_cert.py
+│   └── ...
+│
+├── alerts/             # Détection de crises et envoi d'alertes par mail
+│   ├── detecteur.py
+│   ├── mailer.py
+│   └── ...
+│
+├── web/                # Interface Web (Flask, HTML, templates Jinja)
+│   ├── app.py
+│   ├── templates/
+│   └── static/
+│
+├── utils/              # Fonctions utilitaires (facultatif)
+│   └── helpers.py
+│
+├── data/               # Fichiers de logs, historiques, bases de données
+│   └── ...
+│
+├── README.md           # Description du projet
+├── LICENSE             # Licence (MIT, GPL, etc.)
+├── requirements.txt    # Dépendances Python à installer
+└── .gitignore          # Fichiers à ignorer par Git
+```
 
-
- 
 ---
 
 ## 📣 Auteurs

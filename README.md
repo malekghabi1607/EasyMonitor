@@ -50,36 +50,32 @@ L’interface web permet de consulter :
 
 ```bash
 EasyMonitor/
-├── collect/            # Scripts de collecte des données (Python & Bash)
-│   ├── sondes_cpu.sh / .py
-│   ├── sondes_ram.sh / .py
-│   └── ...
+├── DB/                 # Base de données et fichiers associés
+│   ├── EasyMonitor.code-workspace  # Fichier de configuration de l'espace de travail
+│   └── stockage.db      # Base de données SQLite
 │
-├── storage/            # Modules de stockage et d'archivage
-│   ├── gestion_sqlite.py
-│   ├── parseur_cert.py
-│   └── ...
+├── save/               # Scripts liés à la sauvegarde
+│   └── CreateBackup.sh  # Script pour la création de sauvegarde
 │
-├── alerts/             # Détection de crises et envoi d'alertes par mail
-│   ├── detecteur.py
-│   ├── mailer.py
-│   └── ...
+├── sondes/             # Scripts de collecte des données (Python & Bash)
+│   ├── cpuUsage.sh     # Script Bash pour la collecte CPU
+│   ├── diskUsage.sh    # Script Bash pour la collecte disque
+│   ├── getCertAlert.py # Script Python pour récupérer les alertes CERT
+│   ├── processCount.py # Script Python pour compter les processus
+│   ├── ramUsage.sh     # Script Bash pour la collecte RAM
+│   ├── userCount.sh    # Script Bash pour compter les utilisateurs
 │
-├── web/                # Interface Web (Flask, HTML, templates Jinja)
-│   ├── app.py
-│   ├── templates/
-│   └── static/
+├── scripts/            # Autres scripts utiles
+│   ├── cleanup.py      # Script Python pour le nettoyage
+│   ├── collect_all.py  # Script Python pour collecter toutes les données
+│   └── data.json       # Fichier JSON pour le stockage des données
 │
-├── utils/              # Fonctions utilitaires (facultatif)
-│   └── helpers.py
-│
-├── data/               # Fichiers de logs, historiques, bases de données
-│   └── ...
+├── docs/               # Documentation du projet
+│   └── Projet_AMS.pdf  # Documentation supplémentaire pour le projet AMS
 │
 ├── README.md           # Description du projet
-├── LICENSE             # Licence (MIT, GPL, etc.)
-├── requirements.txt    # Dépendances Python à installer
 └── .gitignore          # Fichiers à ignorer par Git
+
 ```
 
 ---
